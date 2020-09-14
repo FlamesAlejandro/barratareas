@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/headers
+    body.login
+        .contenedor-formulario
+            h1 Crea tu cuenta
+
+            //- Para mostrar los errores, error es un objeto, sacar message
+            if locals.mensajes
+                //- En caso de tener diferentes categorias de mensajes
+                each categoria in Object.keys(locals.mensajes)
+                    each error in mensajes[categoria]
+                        .alerta(class=`${categoria}`)
+                            p=error
+
+
+                //- each error in errores
+                //-     p.error.alerta= error.message
+                //-     antiguo solo por js puro
+
+            form#formulario.caja.caja-login(method="POST" action="/crear-cuenta")
+                .campo
+                    label(for="email") E-mail:
+                    input(type="email" name="email" placeholder="Tu Email" value=email required)
+                .campo
+                    label(for="password") Password:
+                    input(type="password" name="password" placeholder="Tu Password" value=password required)
+                .campo.enviar
+                    input.boton(type="submit" value="Crear Cuenta")
+                .campo
+                    a(href="/iniciar-sesion") Volver a Iniciar Sesión
+
+        script(src="/dist/bundle.js")

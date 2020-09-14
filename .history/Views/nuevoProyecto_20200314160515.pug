@@ -1,0 +1,14 @@
+extends layout
+
+include mixins/crearProyecto
+
+block contenido
+    .contenido-principal
+        h1 #{nombrePagina}
+
+        //- verificar si hay errores
+        //-  pog permite permite iterar arreglos
+        if errores 
+            each error in errores
+                .alerta = error.texto
+        +crearProyecto()

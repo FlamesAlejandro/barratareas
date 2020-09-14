@@ -1,0 +1,1 @@
+"use strict";exports.vardump=function(r){return JSON.stringify(r,null,2)};

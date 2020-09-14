@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/header
+    body.login
+        .contenedor-formulario
+            h1= AgregarPagina
+            p Agrega tu email para reestablecer la contraseña
+            form.caja-login(method="POST" action="/reestablecer")
+                .campo

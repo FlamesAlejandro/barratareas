@@ -1,0 +1,18 @@
+extends layout
+
+block contenido
+    .contenido-principal
+        h1 #{nombrePagina}
+
+        //- verificar si hay errores
+        //-  pog permite permite iterar arreglos
+        if errores 
+            each error in errores
+                .alerta = error.texto
+
+        form.agregar-proyecto(action="/nuevo-proyecto" method="POST")
+            .campo
+                label(for="nombre") Nombre Proyecto:
+                input(type="text" id="nombre" name="nombre" placeholder="Nombre Proyecto")
+            .campo.enviar
+                input(type="submit" value="Agregar" class="boton")

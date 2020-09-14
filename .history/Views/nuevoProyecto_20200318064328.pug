@@ -1,0 +1,17 @@
+extends layout
+
+include mixins/crearProyecto
+
+block contenido
+    .contenido-principal
+        h1 #{nombrePagina}
+
+        //- pre= vardump(proyecto)
+
+        //- verificar si hay errores
+        //-  pog permite permite iterar arreglos
+        if errores 
+            each error in errores
+                .alerta = error.texto
+        //- pasamos los datos de proyecto al mixins para que carge el nombre del proyecto en caso de que tenga algo
+        +crearProyecto(proyecto)

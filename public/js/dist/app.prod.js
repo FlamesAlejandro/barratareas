@@ -1,0 +1,1 @@
+"use strict";var _proyectos=_interopRequireDefault(require("./modulos/proyectos")),_tareas=_interopRequireDefault(require("./modulos/tareas")),_avance=require("./funciones/avance");function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}document.addEventListener("DOMContentLoaded",function(){(0,_avance.actualizarAvance)()});

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/headers
+    body.login
+        .contenedor-formulario
+            h1 Iniciar Sesión
+
+
+            form#formulario.caja.caja-login(method="POST" action="/iniciar-sesion")
+                .campo
+                    label(for="email") E-mail:
+                    input(type="email" name="email" placeholder="Tu Email" value="email" required)
+                .campo
+                    label(for="password") Password:
+                    input(type="password" name="password" placeholder="Tu Password" value="password" required)
+                .campo.enviar
+                    input.boton(type="submit" value="Crear Cuenta")
+                .campo
+                    a(href="/iniciar-sesion") Volver a Iniciar Sesión
+
+        script(src="/dist/bundle.js")

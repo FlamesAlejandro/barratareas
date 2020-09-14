@@ -1,0 +1,1 @@
+"use strict";var Sequelize=require("sequelize"),slug=require("slug"),shortid=require("shortid"),db=require("../config/db"),Proyectos=require("./Proyectos"),Tareas=db.define("tareas",{id:{type:Sequelize.INTEGER(11),primaryKey:!0,autoIncrement:!0},tarea:Sequelize.STRING(100),estado:Sequelize.INTEGER(1)});Tareas.belongsTo(Proyectos),module.exports=Tareas;

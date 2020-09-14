@@ -1,0 +1,27 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/css/normalize.css")
+        link(rel="stylesheet" href="/css/app.css")
+        title #{nombrePagina}
+    body
+        header.barra
+            h1 Barra de Tareas, Administrador de Proyectos
+            a(href="#") Cerrar Sesión
+
+        main.contenedor
+            aside.contenedor-proyectos
+                .panel.crear-proyecto
+                    a(href="/nuevo-proyecto" class="boton") Nuevo proyecto
+                    span +
+                .panel.lista-proyectos
+                    h2 Proyectos
+                    ul#proyectos.proyectos
+                        li
+                            a(href="#") Diseño de tienda virtual
+                        li
+                            a(href="#") Diseño de nuevo blog
+                        li
+                            a(href="#") Diseño de tienda logotipo
+            block contenido

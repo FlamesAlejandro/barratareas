@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        include partials/headers
+    body.login
+        .contenedor-formulario
+            h1 Crea tu cuenta
+
+            form#formulario.caja.caja-login(method="POST" action="/crear-cuenta")
+                .campo
+                    label(for="email") E-mail:
+                    input(type="email" name="email" placeholder="Tu Email")
+                .campo
+                    label(for="password") Password:
+                    input(type="password" name="password" placeholder="Tu Password")
+                .campo.enviar
+                    input.boton(type="submit" value="Crear Cuenta")

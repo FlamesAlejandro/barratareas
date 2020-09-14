@@ -1,0 +1,17 @@
+extends layout
+
+block contenido
+    .contenido-principal
+        h1 #{nombrePagina} - #{proyecto.nombre}
+
+        form.agregar-tarea(action=`/proyectos/${proyecto.url}` method="POST")
+
+        // LISTADO PENDIENTES
+
+        pre= vardump(proyecto)
+
+        //ACIONES
+        .contenedor-acciones
+            a(href=`/proyecto/editar/${proyecto.id}` class="boton") Editar Proyecto
+            //- Se agrega un atributo personalizado de html para eliminar
+            button(data-proyecto-url=proyecto.url type="button" id="eliminar-proyecto" class="boton eliminar") Eliminar Proyecto
