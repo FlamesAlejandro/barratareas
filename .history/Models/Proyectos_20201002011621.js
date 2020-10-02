@@ -6,18 +6,17 @@ const db = require('../config/db');
 
 const Proyectos = db.define('proyectos', {
     id : {
-        type: Sequelize.INTEGER,
+        type : Sequelize.INTEGER,
         primaryKey : true,
         autoIncrement : true
     },
-    nombre: Sequelize.STRING(100),
-    url: Sequelize.STRING(100)
-    // ,
-    // usuarioId: {
-    //     type: Sequelize.INTEGER,
-    //     required: true,
-    //     allowNull: false
-    // }
+    nombre : Sequelize.STRING(100),
+    url : Sequelize.STRING(100),
+    usuarioId: {
+        type: Sequelize.INTEGER,
+        required: true,
+        allowNull: false
+    }
 },{
     // HOOKS, en este caso el hook se ejecuta antes de ingresar a la BD
     hooks:{

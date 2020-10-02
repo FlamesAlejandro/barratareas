@@ -12,7 +12,7 @@ const Proyectos = db.define('proyectos', {
     },
     nombre: Sequelize.STRING(100),
     url: Sequelize.STRING(100)
-    // ,
+    ,
     // usuarioId: {
     //     type: Sequelize.INTEGER,
     //     required: true,

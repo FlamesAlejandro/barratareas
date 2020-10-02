@@ -11,13 +11,12 @@ const Proyectos = db.define('proyectos', {
         autoIncrement : true
     },
     nombre: Sequelize.STRING(100),
-    url: Sequelize.STRING(100)
-    // ,
-    // usuarioId: {
-    //     type: Sequelize.INTEGER,
-    //     required: true,
-    //     allowNull: false
-    // }
+    url: Sequelize.STRING(100),
+    usuarioId: {
+        type: Sequelize.INTEGER,
+        required: true,
+        allowNull: false
+    }
 },{
     // HOOKS, en este caso el hook se ejecuta antes de ingresar a la BD
     hooks:{

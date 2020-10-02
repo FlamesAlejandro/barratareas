@@ -11,8 +11,7 @@ const Proyectos = db.define('proyectos', {
         autoIncrement : true
     },
     nombre: Sequelize.STRING(100),
-    url: Sequelize.STRING(100)
-    // ,
+    url: Sequelize.STRING(100),
     // usuarioId: {
     //     type: Sequelize.INTEGER,
     //     required: true,
