@@ -49,9 +49,6 @@ app.set('views', path.join(__dirname, './views'));
 // agregar flash messages
 app.use(flash());
 
-// Agregamos express validator a toda la aplicación
-app.use(expressValidator());
-
 app.use(cookieParser());
 
 // sessiones nos permiten navegar entre distintas paginas sin volvernos a autentificar
